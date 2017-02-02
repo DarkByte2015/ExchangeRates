@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ExchangeRates.Views.MainPage">
+    <StackLayout>
+        <DatePicker Format="dd.MM.yyyy" MinimumDate="{Binding MinDate}" MaximumDate="{Binding MaxDate}" Date="{Binding Path=Day, Mode=TwoWay}" Margin="150" />
+        <Button Command="{Binding GetCurrencyCommand}" CommandParameter="{Binding}" Text="Get currency" HorizontalOptions="Center" />
+    </StackLayout>
+</ContentPage>

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 
 using Xamarin.Forms;
+using ExchangeRates.ViewModels;
 
 namespace ExchangeRates
 {
@@ -13,7 +14,8 @@ namespace ExchangeRates
         {
             InitializeComponent();
 
-            MainPage = new ExchangeRates.MainPage();
+            MainPage = new Views.MainPage();
+            MainPage.BindingContext = new MainVM();
         }
 
         protected override void OnStart()
